@@ -1,0 +1,35 @@
+<div class="main">
+    <app-navbar></app-navbar>
+    <div class="mainpage">
+        <div class="left">
+            <div>
+                <h4 (click)="navi()">{{'Full_Stack_Developer' | translate}}</h4>
+            </div>
+            <div>
+                <h3>{{ 'Hello,_Im' | translate }}</h3>
+                <h3 style="color: #4FD1C5;">ACHRAF BEN KAABAR</h3></div>
+            <div>
+                <h6>{{'Home_description' | translate}}</h6>
+            </div>
+            <div class="links">
+                <div class="button"> 
+                    <button (click)="downloadCV()">{{ 'Download_CV' | translate }}</button>
+                </div>
+                <div class="images">
+                    <div class="item">
+                        <a href="https://github.com/BenKaabar" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/home/github.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/home/whatsApp.png" alt="">
+                    </div>
+                    <div class="item"><img src="assets/images/home/gmail.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <img src="assets/images/home/Achraf BEN KAABAR.jpg">
+        </div>
+    </div>
+</div>

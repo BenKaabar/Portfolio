@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* dark mode */
+:root {
+  --background-color: white;
+  --text-color: black;
+  --heading-color: black;
+  --main-background: #eceff2;
+}
+.dark-mode {
+  --background-color: rgba(0, 0, 0, 0.7);
+  --text-color: white;
+  --heading-color: white;
+  --main-background: #1F242D;
+}
+
+h1,h2,h3,h4,h5,h6,span,strong,li,p{
+  color: var(--heading-color);
+}
+.main{
+  background-color: var(--main-background);
+}
+
+
+
+/* global css */
+
+body{
+    margin: 0px;
+}
+h1 {
+  font-size: 3rem; 
+  font-weight: bold;
+}
+h2 {
+  font-size: 2.5rem; 
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
+li{
+  font-size: 0.8rem;
+}

@@ -1,0 +1,142 @@
+.navbar{
+    width: 100%;
+    height: 7vh;
+}
+.sun, .moon, .bars{
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+.sun{
+    color: yellow;  
+}
+
+.moon,.bars{
+    color: black;  
+}
+svg{
+    cursor: pointer;
+}
+
+/* Large screen */
+.largeScreen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.largeScreen > .middle{
+    display: flex;
+    justify-content: space-evenly;
+}
+.largeScreen > .middle span{
+    cursor: pointer;
+    padding: 0px 8px;
+    font-size: 1.4rem;
+}
+.largeScreen > .right{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Small screen */
+.smallScreen{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+.smallScreen > .sun{
+    color: yellow;  
+}
+
+/* sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -70%;
+    height: 100vh;
+    width: 70%;
+    background-color: rgb(10,11,16);
+    z-index: 1000;
+    transition: right 0.8s ease-in-out;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+}
+.sidebar.show {
+    right: 0;
+}
+.close{
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
+.sidebar > .middle > .item {
+    padding: 8px 4px;
+    text-align: center;
+}
+.sidebar > .middle > .item span{
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+.language-selector {
+    position: relative;
+    width: auto;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0px 6px;
+  }
+  
+  .selected-language {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flag-icon {
+    width: 20px;
+    height: 15px;
+    margin-right: 8px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0;
+    list-style: none;
+    margin: 5px 0;
+  }
+  
+  .dropdown-menu li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu li:hover {
+    background: #eee;
+  }
+
+  /* Medium screens (576px to 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .largeScreen > .middle span{
+        padding: 0px 6px;
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,78 @@
+<div class="main">
+    <app-navbar></app-navbar>
+    <div class="contact">
+        <div class="left">
+            <form [formGroup]="CreateContactform" (ngSubmit)="CreateContact($event)">
+                <div class="left_info">
+                    <div><h4>{{"Lets_work_together" | translate}}</h4></div>
+                    <div class="namefieled">
+                        <div class="inputfieled">
+                            <input type="text" placeholder="{{'Firstname' | translate}}" formControlName="firstname" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div class="inputfieled">
+                            <input type="text" placeholder="{{'Lastname' | translate}}" formControlName="lastname" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                    </div>
+                    <div class="infofieled">
+                        <div class="inputfieled">
+                            <input type="email" placeholder="{{'Email' | translate}}" formControlName="email" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div class="inputfieled">
+                            <input type="text" placeholder="{{'Phone_number' | translate}}" formControlName="phone" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                    </div>
+                    <div class="select">
+                        <select formControlName="service" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <option value="">{{"Select_a_service" | translate}}</option>
+                            <option value="Web_Developement">{{"Web_Developement" | translate}}</option>
+                            <option value="UX/UI_Designer">{{"UX/UI_Designer" | translate}}</option>
+                            <option value="2D/3D_Designer">{{"2D/3D_Designer" | translate}}</option>
+                            <option value="Video_Editing">{{"Video_Editing" | translate}}</option>
+                        </select>
+                    </div>
+                    <div class="textarea">
+                        <textarea placeholder="{{'Type_a_message_here' | translate}}" formControlName="message"></textarea>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="{{'Send_message' | translate}}" [disabled]="!CreateContactform.valid">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="right">
+            <div class="info">
+                <div class="image">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="item"><strong>{{'Phone' | translate}} / WhatsApp</strong></div>
+                    <div class="item"><h6>+216 23 460 530</h6></div> 
+                </div>
+            </div>
+            <div class="info">
+                <div class="image">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                      </svg>                      
+                </div>
+                <div>
+                    <div class="item"><strong>{{'Email' | translate}}</strong></div>
+                    <div class="item"><h6>achraf.kaabar&#64;gmail.com</h6></div> 
+                </div>
+            </div>
+            <div class="info">
+                <div class="image">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m20.893 13.393-1.135-1.135a2.252 2.252 0 0 1-.421-.585l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 0 1-1.383-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.411-2.353a2.25 2.25 0 0 0 .286-.76m11.928 9.869A9 9 0 0 0 8.965 3.525m11.928 9.868A9 9 0 1 1 8.965 3.525" />
+                      </svg>                                         
+                </div>
+                <div>
+                    <div class="item"><strong>{{'Address' | translate}}</strong></div>
+                    <div class="item"><h6>Djerba, Tunisia</h6></div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

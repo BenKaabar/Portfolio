@@ -1,0 +1,144 @@
+.main{
+    height: 100vh;
+    padding: 10%;
+}
+app-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.contact{
+    display: flex;
+    height: 100%;
+    background-color: #2D3748;
+}
+/* left */
+.left{
+    width: 56%;
+    padding: 20px;
+}
+.left_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+form{
+    width: 100%;
+    height: 100%;
+}
+h4{
+    color: #4FD1C5;
+}
+.namefieled, .infofieled{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.inputfieled{
+    width: 48%;
+}
+.inputfieled input{
+    width: 100%;
+}
+.select{
+    width: 100%;
+}
+.select select{
+    width: 100%;
+}
+.textarea{
+    width: 100%;
+    min-height: 60px;
+}
+.textarea textarea{
+    width: 100%;
+    height: 100%;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.submit input{
+    width: 50%;
+    padding: 6px 8px;
+    border-radius: 12px;
+    background-color: #4FD1C5;
+    color: white;
+    cursor: pointer;
+}
+.submit input:disabled{
+    background-color: rgba(79, 209, 197,0.3);
+    cursor: not-allowed;
+}
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+input.ng-valid.ng-touched {
+    border: 2px solid green;
+}
+textarea.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+textarea.ng-valid.ng-touched {
+    border: 2px solid green;
+}
+/* right */
+.right{
+    width: 44%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info{
+    display: flex;
+    margin: 12px 0px;
+}
+.image{
+    width: 50px;
+    height: 50px;
+    background-color: #1F242D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.image svg{
+    fill: #4FD1C5;
+}
+.item Strong {
+    color: #4FD1C5;
+}
+.right h6{
+    color: white;
+}
+
+/* Medium and small screens (350px to 767px) */
+@media screen and (max-width: 767px) {
+    .main{
+        height: 100dvh;
+        padding: 0px;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .left{
+        width: 100%;
+        height: 60%;
+    }
+    .right{
+        order: -1;
+        width: 100%;
+        height: 40%;
+        padding: 40px 20px 0px 20px;
+    }
+}
