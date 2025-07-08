@@ -14,6 +14,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { WorkComponent } from './components/work/work.component';
 import { WorkDetailsComponent } from './components/work-details/work-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ResumeComponent } from './components/resumeComponents/resume/resume.component';
+import { AboutMeComponent } from './components/resumeComponents/about-me/about-me.component';
+import { EducationComponent } from './components/resumeComponents/education/education.component';
+import { ExperienceComponent } from './components/resumeComponents/experience/experience.component';
+import { SkillsComponent } from './components/resumeComponents/skills/skills.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -27,7 +32,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     PageNotFoundComponent,
     WorkComponent,
-    WorkDetailsComponent
+    WorkDetailsComponent,
+    ResumeComponent,
+    AboutMeComponent,
+    EducationComponent,
+    ExperienceComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

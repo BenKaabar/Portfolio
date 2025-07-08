@@ -1,0 +1,22 @@
+<div class="main">
+    <div><h3>{{"My_Experience" | translate}}</h3></div>
+    <div class="details">
+        <div class="item">
+            <div class="card" *ngFor="let experience of allResumeExperience; ">
+                <div class="date">
+                    <h5>{{experience.date| translate}}</h5>
+                </div>
+                <div class="title">
+                    <h6>
+                        {{experience.title| translate}}
+                    </h6>
+                </div>
+                <div class="description">
+                    <h6>
+                        {{experience.description| translate}}
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

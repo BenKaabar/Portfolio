@@ -1,0 +1,24 @@
+<div class="main">
+    <div><h3>{{"My_Education" | translate}}</h3></div>
+    <div class="details">
+        <div class="item">
+            <div class="card" *ngFor="let education of allResumeEducation">
+                <div class="date">
+                    <h5>
+                        {{education.title | translate}}
+                    </h5>
+                </div>
+                <div class="title">
+                    <h6>
+                        {{education.date | translate}}
+                    </h6>
+                </div>
+                <div class="description">
+                    <h6>
+                        {{education.description | translate}}
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

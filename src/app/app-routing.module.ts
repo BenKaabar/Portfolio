@@ -6,6 +6,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ServiceComponent } from './components/service/service.component';
 import { WorkDetailsComponent } from './components/work-details/work-details.component';
 import { WorkComponent } from './components/work/work.component';
+import { ResumeComponent } from './components/resumeComponents/resume/resume.component';
+import { AboutMeComponent } from './components/resumeComponents/about-me/about-me.component';
+import { EducationComponent } from './components/resumeComponents/education/education.component';
+import { ExperienceComponent } from './components/resumeComponents/experience/experience.component';
+import { SkillsComponent } from './components/resumeComponents/skills/skills.component';
 
 const routes: Routes = [
   { path: "Home", component: HomeComponent },
@@ -13,15 +18,15 @@ const routes: Routes = [
   { path: "Contact", component: ContactComponent },
   { path: "Work", component: WorkComponent },
   { path: "WorkDetail", component: WorkDetailsComponent },
-  // {
-  //   path: "Resume", component: ResumeComponent, children: [
-  //     { path: "Experience", component: ResumeExperienceComponent },
-  //     { path: "Education", component: ResumeEducationComponent },
-  //     { path: "Skills", component: ResumeSkillsComponent },
-  //     { path: "AboutMe", component: ResumeAboutMeComponent },
-  //     { path: '', redirectTo: '/Education', pathMatch: 'full' }
-  //   ]
-  // },
+  {
+    path: "Resume", component: ResumeComponent, children: [
+      { path: "Experience", component: ExperienceComponent },
+      { path: "Education", component: EducationComponent },
+      { path: "Skills", component: SkillsComponent },
+      { path: "AboutMe", component: AboutMeComponent },
+      { path: '', redirectTo: '/Education', pathMatch: 'full' }
+    ]
+  },
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

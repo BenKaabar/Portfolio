@@ -1,0 +1,17 @@
+<div class="main">
+    <app-navbar></app-navbar>
+    <div class="resume">
+        <div class="left">
+            <h3>{{"why_hire_me" |translate}}</h3>
+            <div class="buttons">
+                <div class="item"><button (click)="selectElement('Education')" [ngClass]="{'selected': selectelement === 'Education'}" [routerLink]="['/Resume/Education']"><strong>{{"education" |translate}}</strong></button></div>
+                <div class="item"><button (click)="selectElement('Experience')" [ngClass]="{'selected': selectelement === 'Experience'}" [routerLink]="['/Resume/Experience']"><strong>{{"experience" |translate}}</strong></button></div>
+                <div class="item"><button (click)="selectElement('Skills')" [ngClass]="{'selected': selectelement === 'Skills'}" [routerLink]="['/Resume/Skills']"><strong>{{"skills" |translate}}</strong></button></div>
+                <div class="item"><button (click)="selectElement('AboutMe')" [ngClass]="{'selected': selectelement === 'AboutMe'}" [routerLink]="['/Resume/AboutMe']"><strong>{{"about_me" |translate}}</strong></button></div>
+            </div>
+        </div>
+        <div class="right">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

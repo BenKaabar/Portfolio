@@ -1,1 +1,58 @@
-<p>work works!</p>
+<div class="main">
+    <app-navbar></app-navbar>
+    <div class="mainpage" *ngFor="let work of paginatedWorks; let i = index" (touchstart)="onTouchStart($event)"
+        (touchend)="onTouchEnd($event)">
+        <div class="left">
+            <div class="leftdetail">
+                <div class="number">
+                    <h1>0{{ (page - 1) * itemsPerPage + i + 1 }}</h1>
+                </div>
+                <div class="titleProjet">
+                    <h4>{{ work.title | translate }}</h4>
+                </div>
+                <div class="description">
+                    <h6>{{ work.shortDescription | translate }}</h6>
+                </div>
+                <div class="technology">
+                    <h6>{{ work.MainTechnology }}</h6>
+                </div>
+                <div class="links">
+                    <div class="link">
+                        <button (click)="goToWorkDetail(work)" class="link-button">{{"More_details" |
+                            translate}}</button>
+                    </div>
+                    <div class="github">
+                        <a href="{{ work.github}}" target="_blank">
+                            <img src="assets/images/work/github.png" alt="" style="width: 32px; height: 32px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="video">
+                <div class="image">
+                    <img [src]="work.photoWork">
+                </div>
+                <div class="pagination">
+                    <div class="arrow" [ngClass]="{'disabled': isPreviousPageDisabled}"
+                        [style.pointer-events]="isPreviousPageDisabled ? 'none' : 'auto'">
+                        <svg (click)="goToPreviousPage()" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" class="size-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" width="32" height="32"
+                                d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                    <div class="arrow" [ngClass]="{'disabled': isNextPageDisabled}"
+                        [style.pointer-events]="isNextPageDisabled ? 'none' : 'auto'">
+                        <svg (click)="goToNextPage()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"
+                            stroke-width="1.5" stroke="currentColor" class="size-12">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
