@@ -8,7 +8,7 @@ import { WorkService } from 'src/app/services/work/work.service';
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.css']
 })
-export class WorkComponent implements OnInit{
+export class WorkComponent implements OnInit {
   selectedWork: Work | null = null;
   page: number = 1;
   itemsPerPage: number = 1;
@@ -16,16 +16,17 @@ export class WorkComponent implements OnInit{
   endX = 0;
   constructor(private router: Router,
     private workService: WorkService) { }
-  
+
   ngOnInit(): void {
     this.workService.clearWork();
   }
 
+  //  ********************************************************************** All works **********************************************************************
   allWorks: Work[] = [
     {
-      title: 'titlework1',
-      shortDescription: 'Shortdescriptionwork1',
-      longDescription: 'Longdescriptionwork1',
+      title: 'titlework2',
+      shortDescription: 'Shortdescriptionwork2',
+      longDescription: 'Longdescriptionwork2',
       videoLink: 'https://drive.google.com/file/d/130-T4raMr7kVOrLaD04cpPqLi-Mpju-p/preview',
       photoWork: 'assets/images/work/RentNGo.png',
       github: 'https://github.com/BenKaabar/RentNGo',
@@ -36,17 +37,17 @@ export class WorkComponent implements OnInit{
       title: 'titlework1',
       shortDescription: 'Shortdescriptionwork1',
       longDescription: 'Longdescriptionwork1',
-      videoLink: 'https://drive.google.com/file/d/130-T4raMr7kVOrLaD04cpPqLi-Mpju-p/preview',
-      photoWork: 'assets/images/work/RentNGo.png',
-      github: 'https://github.com/BenKaabar/RentNGo',
-      MainTechnology: 'Spring boot, Angular, MySQL',
-      AllTechnology: 'Spring boot, angular16, html5, css3, bootstrap5, typescript, java, MySQL',
+      videoLink: 'https://drive.google.com/file/d/11TxChZxhxnMdqzKbFAZyVZgu3jjCJH-_/preview',
+      photoWork: 'assets/images/work/foodi.png',
+      github: 'https://github.com/BenKaabar/Foodie',
+      MainTechnology: 'Angular',
+      AllTechnology: 'angular16, html5, css3, bootstrap5, typescript',
     },
   ];
-  //  ********************************************************************** Work Detail **********************************************************************
+  //  ********************************************************************** Navigation to work detail **********************************************************************
   goToWorkDetail(work: Work): void {
     this.workService.setWork(work);
-    this.router.navigateByUrl('/WorkDetail');
+    this.router.navigateByUrl('/workDetail');
   }
 
   //  ********************************************************************** Pagination **********************************************************************

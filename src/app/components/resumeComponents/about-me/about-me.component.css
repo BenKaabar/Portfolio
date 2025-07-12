@@ -1,15 +1,22 @@
-.main{
+.main {
     width: 100%;
     height: 100%;
     padding: 20px;
-    
 }
-.details{
+
+.details {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     height: 70%;
 }
-.item{
+
+.item {
     display: flex;
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        padding: 0px;
+    }
 }

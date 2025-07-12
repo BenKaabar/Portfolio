@@ -10,9 +10,7 @@ import { LanguageService } from 'src/app/services/language/language.service';
 export class HomeComponent implements OnInit {
   currentLanguage!: string;
 
-  constructor(private languageService: LanguageService,
-    private router: Router
-  ) { }
+  constructor(private languageService: LanguageService) { }
 
   ngOnInit(): void {
     this.checkLanguage();
@@ -35,8 +33,5 @@ export class HomeComponent implements OnInit {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  }
-  navi() {
-    this.router.navigateByUrl("/Login")
   }
 }

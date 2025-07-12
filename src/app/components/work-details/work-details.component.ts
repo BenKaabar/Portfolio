@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Work } from 'src/app/models/Work';
@@ -19,10 +19,13 @@ export class WorkDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.workService.getWork() == null) {
-      this.router.navigateByUrl("/Work")
+      this.router.navigateByUrl("/work")
     }
     this.currentWork = this.workService.getWork();
     this.safeVideoLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.currentWork!.videoLink);
   }
-
+  navigate() {
+    this.workService.clearWork();
+    this.router.navigateByUrl("/work")
+  }
 }

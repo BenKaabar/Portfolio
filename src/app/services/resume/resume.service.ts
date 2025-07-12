@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ResumeService {
-  private selectedResume: string = "Education";
+  private selectedResume: string = "education";
 
   setResume(name: string) {
     this.selectedResume = name;

@@ -16,7 +16,7 @@
             </div>
             <div class="links">
                 <div class="link">
-                    <button [routerLink]="['/Work']" class="link-button">{{"Less_details" | translate}}</button>
+                    <button (click)="navigate()" class="link-button">{{"Less_details" | translate}}</button>
                 </div>
                 <div class="github">
                     <a [href]="currentWork?.github" target="_blank">

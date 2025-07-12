@@ -14,15 +14,9 @@ export class NavbarComponent implements OnInit {
   currentLanguage!: string;
   currentFlag!: string;
   dropdownOpen = false;
-  @ViewChild('dropdown', { static: true }) dropdownRef!: ElementRef;
+  @ViewChild('dropdown') dropdownRef!: ElementRef;
+  @ViewChild('sidebarToggle') sidebarToggleRef!: ElementRef;
 
-  @HostListener('document:click', ['$event'])
-  onClickOutside(event: MouseEvent) {
-    const clickedInside = this.dropdownRef?.nativeElement.contains(event.target);
-    if (!clickedInside) {
-      this.dropdownOpen = false;
-    }
-  }
   constructor(private translate: TranslateService, private languageService: LanguageService) {
     const storedDarkMode = localStorage.getItem('darkMode');
     if (storedDarkMode === null) {
@@ -42,6 +36,18 @@ export class NavbarComponent implements OnInit {
     this.translate.use(this.currentLanguage);
     this.checkScreenSize();
   }
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: MouseEvent) {
+    const clickedInside = this.dropdownRef?.nativeElement.contains(event.target);
+    const clickedSidebarToggle = this.sidebarToggleRef?.nativeElement.contains(event.target);
+    if (!clickedInside) {
+      this.dropdownOpen = false;
+    }
+    if (this.isSidebarVisible && !clickedSidebarToggle) {
+      this.isSidebarVisible = false;
+    }
+  }
+
   toggleDropdown(event: MouseEvent) {
     event?.stopPropagation();
     this.dropdownOpen = !this.dropdownOpen;
@@ -82,4 +88,27 @@ export class NavbarComponent implements OnInit {
   }
 
 }
+
+
+
+// @HostListener('document:click', ['$event'])
+// onClickOutside(event: MouseEvent) {
+//   const clickedInsideDropdown = this.dropdownRef?.nativeElement.contains(event.target);
+//   const clickedInsideSidebar = this.sidebarRef?.nativeElement.contains(event.target);
+//   console.log("clickedInsideSidebar " + clickedInsideSidebar)
+//   console.log("clickedInsideDropdown " + clickedInsideDropdown)
+//     console.log("isSidebarVisible " + this.isSidebarVisible)
+//   // Si le clic est en dehors du dropdown → ferme dropdown
+//   if (!clickedInsideDropdown) {
+//     this.dropdownOpen = false;
+//     console.log("---clickedInsideDropdown " + clickedInsideDropdown)
+//   }
+
+//   // Si le clic est en dehors de la sidebar ET qu’elle est ouverte → ferme sidebar
+//   if (this.isSidebarVisible && !clickedInsideSidebar) {
+//     this.isSidebarVisible = false;
+//     console.log("---clickedInsideSidebar " + clickedInsideSidebar)
+//   }
+//     console.log("------- ")
+// }
 

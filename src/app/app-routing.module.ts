@@ -13,21 +13,21 @@ import { ExperienceComponent } from './components/resumeComponents/experience/ex
 import { SkillsComponent } from './components/resumeComponents/skills/skills.component';
 
 const routes: Routes = [
-  { path: "Home", component: HomeComponent },
-  { path: "Services", component: ServiceComponent },
-  { path: "Contact", component: ContactComponent },
-  { path: "Work", component: WorkComponent },
-  { path: "WorkDetail", component: WorkDetailsComponent },
+  { path: "home", component: HomeComponent },
+  { path: "services", component: ServiceComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "work", component: WorkComponent },
+  { path: "workDetail", component: WorkDetailsComponent },
   {
-    path: "Resume", component: ResumeComponent, children: [
-      { path: "Experience", component: ExperienceComponent },
-      { path: "Education", component: EducationComponent },
-      { path: "Skills", component: SkillsComponent },
-      { path: "AboutMe", component: AboutMeComponent },
-      { path: '', redirectTo: '/Education', pathMatch: 'full' }
+    path: "resume", component: ResumeComponent, children: [
+      { path: "experience", component: ExperienceComponent },
+      { path: "education", component: EducationComponent },
+      { path: "skills", component: SkillsComponent },
+      { path: "aboutMe", component: AboutMeComponent },
+      { path: '', redirectTo: '/education', pathMatch: 'full' }
     ]
   },
-  { path: '', redirectTo: '/Home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 @NgModule({

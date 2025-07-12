@@ -8,7 +8,6 @@ import { ResumeEducation } from 'src/app/models/ResumeEducation';
 })
 export class EducationComponent {
   allResumeEducation: ResumeEducation[] = [
-
     {
       title: 'dateeducation3',
       date: 'titleeducation3',

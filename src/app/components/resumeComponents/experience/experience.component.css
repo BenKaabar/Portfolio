@@ -1,12 +1,14 @@
-.main{
+.main {
     width: 100%;
     height: 100%;
-    padding: 20px;    
+    padding: 0px;
 }
-h3{
-    margin-bottom: 20px;
+
+h3 {
+    margin-bottom: 10px;
 }
-.details{
+
+.details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,30 +16,37 @@ h3{
     overflow-x: hidden;
     max-height: 350px;
 }
-.item{
+
+.item {
     width: 100%;
     height: 100%;
     display: flex;
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    margin-bottom: 10px;
 }
+
 .card {
     width: 48%;
-    flex: 1 0 250px;
+    max-height: 250px;
+    flex: 1 0;
 }
-.date h5{
+
+.date h5 {
     color: #4FD1C5;
 }
-.title h6{
+
+.title h6 {
     font-weight: bold;
     margin-bottom: 6px;
 }
-.description h6{
-    margin-bottom: 12px;
+
+.description h6 {
+    margin-bottom: 6px;
 }
+
 .details::-webkit-scrollbar {
-    width: 12px; 
+    width: 12px;
 }
 
 .details::-webkit-scrollbar-track {
@@ -48,21 +57,25 @@ h3{
     background-color: #4FD1C5;
     border-radius: 10px;
 }
+
 .details {
-    scrollbar-color: #4FD1C5 #f1f1f1; 
+    scrollbar-color: #4FD1C5 #f1f1f1;
     scrollbar-width: thin;
 }
+
 /* Medium and small screens (767px) */
 @media screen and (max-width: 767px) {
-    .main{
+    .main {
         width: 100%;
-        height: 100%;   
+        height: 100%;
         padding-top: 0px;
     }
-    .details{
+
+    .details {
         max-height: 250px;
     }
-    .item{
+
+    .item {
         width: 100%;
         height: 100%;
         display: flex;
@@ -70,8 +83,16 @@ h3{
         display: flex;
         flex-wrap: wrap;
     }
+
     .card {
         width: 100%;
-        flex: 1 0 150px;
+        flex: 1 0;
+        max-height: 150px;
+        margin-bottom: 10px;
+
+    }
+
+    .description h6 {
+        font-size: 12px;
     }
 }
