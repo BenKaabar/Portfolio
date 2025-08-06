@@ -24,6 +24,16 @@ export class WorkComponent implements OnInit {
   //  ********************************************************************** All works **********************************************************************
   allWorks: Work[] = [
     {
+      title: 'titlework1',
+      shortDescription: 'Shortdescriptionwork1',
+      longDescription: 'Longdescriptionwork1',
+      videoLink: 'https://drive.google.com/file/d/11TxChZxhxnMdqzKbFAZyVZgu3jjCJH-_/preview',
+      photoWork: 'assets/images/work/foodi.png',
+      github: 'https://github.com/BenKaabar/Foodie',
+      MainTechnology: 'Angular',
+      AllTechnology: 'angular16, html5, css3, bootstrap5, typescript',
+    },
+    {
       title: 'titlework2',
       shortDescription: 'Shortdescriptionwork2',
       longDescription: 'Longdescriptionwork2',
@@ -34,14 +44,14 @@ export class WorkComponent implements OnInit {
       AllTechnology: 'Spring boot, angular16, html5, css3, bootstrap5, typescript, java, MySQL',
     },
     {
-      title: 'titlework1',
-      shortDescription: 'Shortdescriptionwork1',
-      longDescription: 'Longdescriptionwork1',
-      videoLink: 'https://drive.google.com/file/d/11TxChZxhxnMdqzKbFAZyVZgu3jjCJH-_/preview',
-      photoWork: 'assets/images/work/foodi.png',
-      github: 'https://github.com/BenKaabar/Foodie',
-      MainTechnology: 'Angular',
-      AllTechnology: 'angular16, html5, css3, bootstrap5, typescript',
+      title: 'titlework3',
+      shortDescription: 'Shortdescriptionwork3',
+      longDescription: 'Longdescriptionwork3',
+      videoLink: 'https://drive.google.com/file/d/1gx5pwfkxd9G8XFoyvjTrW1QDgofQlqrn/preview',
+      photoWork: 'assets/images/work/liveChat.png',
+      github: 'https://github.com/BenKaabar/LiveChat',
+      MainTechnology: 'Spring boot, Angular, Mongo DB, Web Socket',
+      AllTechnology: 'Spring boot, angular16, html5, css3, bootstrap5, typescript, java, Mongo DB, Web Socket, ngx-emoji-mart',
     },
   ];
   //  ********************************************************************** Navigation to work detail **********************************************************************

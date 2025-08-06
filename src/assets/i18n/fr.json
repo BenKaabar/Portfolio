@@ -78,6 +78,9 @@
     "titlework2":"RentNGo",
     "Shortdescriptionwork2": "Site de location de voitures avec fonctionnalités pour visiteurs, clients et administrateurs.",
     "Longdescriptionwork2": "Les administrateurs peuvent se connecter et accéder à un tableau de bord pour gérer les contacts, clients, réservations, avis et voitures. Les clients peuvent s'inscrire et se connecter pour accéder à leur tableau de bord, mettre à jour leur profil, consulter l'historique des réservations, effectuer de nouvelles réservations et laisser des avis. RentNGo comprend également une barre de navigation pour accéder facilement aux pages Accueil, Nos Voitures, FAQ, À propos, Avis et Contact. Les visiteurs peuvent explorer facilement les fonctionnalités de RentNGo, mais doivent se connecter comme client pour louer une voiture, laisser un avis ou contacter le service.",
+    "titlework3":"LiveChat",
+    "Shortdescriptionwork3": "Une application de chat en temps réel avec authentification utilisateur utilisant Spring Boot et Angular, basée sur WebSocket.",
+    "Longdescriptionwork3": "Ce projet est une application web full-stack permettant aux utilisateurs de s'inscrire, de se connecter et de discuter en temps réel. Le backend est développé avec Spring Boot, gérant l'authentification des utilisateurs (inscription et connexion), la gestion des sessions, et la messagerie via WebSocket. Le frontend est développé avec Angular et offre une interface utilisateur réactive pour les discussions, la gestion des utilisateurs et les mises à jour en temps réel. L'application garantit une communication sécurisée et une expérience utilisateur fluide.",
 
     "-contact": "************************************ Contact *********************************************",
     "Lets_work_together": "Travaillons ensemble",
