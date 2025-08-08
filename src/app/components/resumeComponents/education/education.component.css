@@ -42,7 +42,7 @@ h3 {
 }
 
 .description h6 {
-    font-size: clamp(10px, 2vw, 16px);
+    font-size: clamp(10px, 1.4vw, 16px);
     margin-bottom: 6px;
 }
 
