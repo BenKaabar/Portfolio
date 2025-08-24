@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
   // ********************************************************************** download CV **********************************************************************
   downloadCV() {
     this.checkLanguage();
-    console.log("home " + this.currentLanguage)
     let fileName = this.currentLanguage === 'fr' ? 'CV FR ACHRAF BEN KAABAR.pdf' : 'CV EN ACHRAF BEN KAABAR.pdf';
     let filePath = `assets/pdf/${fileName}`;
     const link = document.createElement('a');
