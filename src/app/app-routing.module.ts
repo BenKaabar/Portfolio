@@ -11,12 +11,16 @@ import { AboutMeComponent } from './components/resumeComponents/about-me/about-m
 import { EducationComponent } from './components/resumeComponents/education/education.component';
 import { ExperienceComponent } from './components/resumeComponents/experience/experience.component';
 import { SkillsComponent } from './components/resumeComponents/skills/skills.component';
+import { VideoeditingComponent } from './components/videoediting/videoediting.component';
+import { MarkitingdigitalComponent } from './components/markitingdigital/markitingdigital.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "services", component: ServiceComponent },
   { path: "contact", component: ContactComponent },
-  { path: "work", component: WorkComponent },
+  { path: "Markitingdigital", component: MarkitingdigitalComponent },
+  { path: "Videoediting", component: VideoeditingComponent },
+  { path: "web", component: WorkComponent },
   { path: "workDetail", component: WorkDetailsComponent },
   {
     path: "resume", component: ResumeComponent, children: [

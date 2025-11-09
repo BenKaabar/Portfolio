@@ -1,0 +1,38 @@
+<div class="main">
+    <app-navbar></app-navbar>
+    <div class="body" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+        <div class="card" *ngFor="let list of paginatedWorks">
+            <img [src]="list.urlImage" alt="" (click)="openConsultModal(list)">
+        </div>
+    </div>
+    <div class="bottom">
+        <div>
+            <svg (click)="goToPreviousPage()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="size-9">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </div>
+        <div>
+            <span class="page-indicator">
+                <h5>{{ page }} / {{ totalPages }}</h5>
+            </span>
+        </div>
+        <div>
+            <svg (click)="goToNextPage()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="size-9">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Tailwind -->
+<div *ngIf="isConsultModalOpen" class="modal-overlay" (click)="closeConsultModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="flex items-center justify-center h-full">
+            <img (click)="closeConsultModal()" [src]="selectedlist?.urlImage" alt="selected project"
+                class="modal-image" />
+        </div>
+    </div>
+</div>

@@ -19,13 +19,13 @@ export class WorkDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.workService.getWork() == null) {
-      this.router.navigateByUrl("/work")
+      this.router.navigateByUrl("/web")
     }
     this.currentWork = this.workService.getWork();
     this.safeVideoLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.currentWork!.videoLink);
   }
   navigate() {
     this.workService.clearWork();
-    this.router.navigateByUrl("/work")
+    this.router.navigateByUrl("/web")
   }
 }

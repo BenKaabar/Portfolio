@@ -7,12 +7,13 @@
             </div>
             <div>
                 <h3>{{ 'Hello,_Im' | translate }}</h3>
-                <h3 style="color: #4FD1C5;">ACHRAF BEN KAABAR</h3></div>
+                <h3 style="color: #4FD1C5;">ACHRAF BEN KAABAR</h3>
+            </div>
             <div>
-                <h6>{{'Home_description' | translate}}</h6>
+                <h6 class="description">{{'Home_description' | translate}}</h6>
             </div>
             <div class="links">
-                <div class="button"> 
+                <div class="button">
                     <button (click)="downloadCV()">{{ 'Download_CV' | translate }}</button>
                 </div>
                 <div class="images">
@@ -22,9 +23,17 @@
                         </a>
                     </div>
                     <div class="item">
-                        <img src="assets/images/home/whatsApp.png" alt="">
+                        <a href="https://wa.me/21623460530?text=Hello%20Achraf!%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/home/whatsApp.png" alt="WhatsApp">
+                        </a>
                     </div>
-                    <div class="item"><img src="assets/images/home/gmail.png" alt=""></div>
+                    <div class="item">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=achraf.kaabar@gmail.com&su=Contact%20from%20your%20portfolio&body=Hello%20Achraf,"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/home/gmail.png" alt="Gmail">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

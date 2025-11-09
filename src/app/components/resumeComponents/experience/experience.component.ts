@@ -9,6 +9,16 @@ import { ResumeExperience } from 'src/app/models/ResumeExperience';
 export class ExperienceComponent {
   allResumeExperience: ResumeExperience[] = [
     {
+      title: 'dateexperience8',
+      date: 'titleexperience8',
+      description: 'descriptionexperience8'
+    },
+    {
+      title: 'dateexperience7',
+      date: 'titleexperience7',
+      description: 'descriptionexperience7'
+    },
+    {
       title: 'dateexperience6',
       date: 'titleexperience6',
       description: 'descriptionexperience6'

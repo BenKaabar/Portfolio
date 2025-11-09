@@ -1,7 +1,8 @@
-.main{
+.main {
     height: 100vh;
     padding: 10% 10%;
 }
+
 app-navbar {
     position: fixed;
     top: 0;
@@ -9,33 +10,42 @@ app-navbar {
     width: 100%;
     z-index: 1000;
 }
-.mainpage{
+
+.mainpage {
     display: flex;
     height: 100%;
 }
 
-.left{
+.left {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 60%;
 }
-.links{
+
+.links {
     display: flex;
     text-align: center;
     color: #4FD1C5;
 }
-.images{
+
+.images {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     justify-content: space-evenly;
     width: 50%;
 }
-.button{
+
+.description {
+    font-size: clamp(10px, 2vw, 18px);
+}
+
+.button {
     width: 50%;
 }
-.links button{
+
+.links button {
     height: 40px;
     border: 2px solid rgb(79, 209, 197);
     padding: 8px 12px;
@@ -43,11 +53,13 @@ app-navbar {
     width: 100%;
     cursor: pointer;
 }
-.links button:hover{
+
+.links button:hover {
     background-color: #4FD1C5;
     color: white;
 }
-.item{
+
+.item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,22 +70,25 @@ app-navbar {
     margin: 0px 4px;
     cursor: pointer;
 }
-.item > img{
+
+.item>img {
     width: 30px;
     height: 30px;
 }
-.right{
+
+.right {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40%;
-    padding: 20px;
+    padding: 10px;
 }
-.right > img {
-    width: 80%; 
+
+.right>img {
+    width: 80%;
     object-fit: contain;
-    border-radius: 50%; 
-    border: 6px dashed #4FD1C5; 
+    border-radius: 50%;
+    border: 6px dashed #4FD1C5;
     animation: borderAnimation 3s infinite;
 }
 
@@ -81,60 +96,71 @@ app-navbar {
     0% {
         border-color: #4FD1C5;
     }
+
     50% {
         border-color: #FF6347;
     }
+
     100% {
         border-color: #4FD1C5;
     }
 }
 
-@media screen and (min-width: 767px) and (max-width:861px){
-    .links button{
+@media screen and (min-width: 767px) and (max-width:861px) {
+    .links button {
         padding: 6px;
         font-size: 0.8rem;
     }
 }
+
 /* Medium screens (576px to 767px) */
 @media screen and (max-width: 767px) {
-    .main{
+    .main {
         height: 100dvh;
     }
-    .mainpage{
+
+    .mainpage {
         display: flex;
         height: 100%;
         flex-direction: column;
     }
+
     .right {
         order: -1;
         width: 100%;
         height: 40%;
     }
+
     .left {
         width: 100%;
         height: 60%;
         text-align: center;
     }
-    .right > img {
-        height: 100%; 
+
+    .right>img {
+        height: 100%;
         width: auto;
         object-fit: contain;
-        border-radius: 50%; 
-        border: 6px dashed #4FD1C5; 
+        border-radius: 50%;
+        border: 6px dashed #4FD1C5;
         animation: borderAnimation 3s infinite;
     }
-    .links{
+
+    .links {
         display: flex;
         flex-direction: column;
     }
-    .images{
+
+    .images {
         display: flex;
         width: 100%;
     }
-    .button{
+
+    .button {
         width: 100%;
     }
-    .links button{
+
+    .links button {
         height: 30px;
         padding: 6px;
         width: 80%;
@@ -142,18 +168,21 @@ app-navbar {
         font-size: 0.8rem;
         margin: 10px 0px;
     }
-    .item{
+
+    .item {
         width: 30px;
         height: 30px;
         border-radius: 15px;
         font-size: 0.8rem;
     }
 }
-@media screen and (max-width: 576px){
-    .main{
+
+@media screen and (max-width: 576px) {
+    .main {
         height: 100dvh;
     }
-    .right > img {
-        height: 80%; 
+
+    .right>img {
+        height: 80%;
     }
 }

@@ -14,6 +14,7 @@ export class WorkComponent implements OnInit {
   itemsPerPage: number = 1;
   startX = 0;
   endX = 0;
+  
   constructor(private router: Router,
     private workService: WorkService) { }
 

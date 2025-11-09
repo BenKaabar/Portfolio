@@ -19,6 +19,8 @@ import { AboutMeComponent } from './components/resumeComponents/about-me/about-m
 import { EducationComponent } from './components/resumeComponents/education/education.component';
 import { ExperienceComponent } from './components/resumeComponents/experience/experience.component';
 import { SkillsComponent } from './components/resumeComponents/skills/skills.component';
+import { VideoeditingComponent } from './components/videoediting/videoediting.component';
+import { MarkitingdigitalComponent } from './components/markitingdigital/markitingdigital.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +39,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutMeComponent,
     EducationComponent,
     ExperienceComponent,
-    SkillsComponent
+    SkillsComponent,
+    VideoeditingComponent,
+    MarkitingdigitalComponent
   ],
   imports: [
     BrowserModule,
