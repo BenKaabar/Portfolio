@@ -14,7 +14,7 @@ export class WorkComponent implements OnInit {
   itemsPerPage: number = 1;
   startX = 0;
   endX = 0;
-  
+
   constructor(private router: Router,
     private workService: WorkService) { }
 
@@ -25,24 +25,14 @@ export class WorkComponent implements OnInit {
   //  ********************************************************************** All works **********************************************************************
   allWorks: Work[] = [
     {
-      title: 'titlework1',
-      shortDescription: 'Shortdescriptionwork1',
-      longDescription: 'Longdescriptionwork1',
-      videoLink: 'https://drive.google.com/file/d/11TxChZxhxnMdqzKbFAZyVZgu3jjCJH-_/preview',
-      photoWork: 'assets/images/work/foodi.png',
-      github: 'https://github.com/BenKaabar/Foodie',
-      MainTechnology: 'Angular',
-      AllTechnology: 'angular16, html5, css3, bootstrap5, typescript',
-    },
-    {
-      title: 'titlework2',
-      shortDescription: 'Shortdescriptionwork2',
-      longDescription: 'Longdescriptionwork2',
-      videoLink: 'https://drive.google.com/file/d/130-T4raMr7kVOrLaD04cpPqLi-Mpju-p/preview',
-      photoWork: 'assets/images/work/RentNGo.png',
-      github: 'https://github.com/BenKaabar/RentNGo',
-      MainTechnology: 'Spring boot, Angular, MySQL',
-      AllTechnology: 'Spring boot, angular16, html5, css3, bootstrap5, typescript, java, MySQL',
+      title: 'titlework4',
+      shortDescription: 'Shortdescriptionwork4',
+      longDescription: 'Longdescriptionwork4',
+      videoLink: 'https://drive.google.com/file/d/1UiOaB40a-ivm2UiB4NLPUFOQFHH1FDBn/preview',
+      photoWork: 'assets/images/work/ChapterOne.png',
+      github: 'https://github.com/BenKaabar/ChapterOne',
+      MainTechnology: 'Spring boot, Angular and Mongo DB',
+      AllTechnology: 'Spring boot, angular16, html5, css3, bootstrap5, typescript, java, Mongo DB and Charts',
     },
     {
       title: 'titlework3',
@@ -51,9 +41,30 @@ export class WorkComponent implements OnInit {
       videoLink: 'https://drive.google.com/file/d/1gx5pwfkxd9G8XFoyvjTrW1QDgofQlqrn/preview',
       photoWork: 'assets/images/work/liveChat.png',
       github: 'https://github.com/BenKaabar/LiveChat',
-      MainTechnology: 'Spring boot, Angular, Mongo DB, Web Socket',
-      AllTechnology: 'Spring boot, angular16, html5, css3, bootstrap5, typescript, java, Mongo DB, Web Socket, ngx-emoji-mart',
+      MainTechnology: 'Spring boot, Angular, Mongo DB and Web Socket',
+      AllTechnology: 'Spring boot, angular16, html5, css3, bootstrap5, typescript, java, Mongo DB, Web Socket and ngx-emoji-mart',
     },
+    {
+      title: 'titlework2',
+      shortDescription: 'Shortdescriptionwork2',
+      longDescription: 'Longdescriptionwork2',
+      videoLink: 'https://drive.google.com/file/d/130-T4raMr7kVOrLaD04cpPqLi-Mpju-p/preview',
+      photoWork: 'assets/images/work/RentNGo.png',
+      github: 'https://github.com/BenKaabar/RentNGo',
+      MainTechnology: 'Spring boot, Angular and MySQL',
+      AllTechnology: 'Spring boot, angular16, html5, css3, bootstrap5, typescript, java and MySQL',
+    },
+    {
+      title: 'titlework1',
+      shortDescription: 'Shortdescriptionwork1',
+      longDescription: 'Longdescriptionwork1',
+      videoLink: 'https://drive.google.com/file/d/11TxChZxhxnMdqzKbFAZyVZgu3jjCJH-_/preview',
+      photoWork: 'assets/images/work/foodi.png',
+      github: 'https://github.com/BenKaabar/Foodie',
+      MainTechnology: 'Angular',
+      AllTechnology: 'angular16, html5, css3, bootstrap5 and typescript',
+    },
+
   ];
   //  ********************************************************************** Navigation to work detail **********************************************************************
   goToWorkDetail(work: Work): void {

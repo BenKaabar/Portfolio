@@ -16,16 +16,16 @@ export class MarkitingdigitalComponent implements OnInit {
 
   lists: any[] = [
     {
-      urlImage: "assets/images/markiting digital/foodi.png"
+      urlImage: "assets/images/markiting digital/ChapterOne.png"
     },
     {
-      urlImage: "assets/images/markiting digital/foodi.png"
+      urlImage: "assets/images/markiting digital/RentNGo.png"
     },
     {
       urlImage: "assets/images/markiting digital/Profile LinkedIn.png"
     },
     {
-      urlImage: "assets/images/markiting digital/foodi.png"
+      urlImage: "assets/images/markiting digital/liveChat.png"
     },
     {
       urlImage: "assets/images/markiting digital/club chess guellala.png"

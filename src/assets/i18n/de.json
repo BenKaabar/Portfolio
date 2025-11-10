@@ -87,6 +87,9 @@
         "titlework3": "LiveChat",
         "Shortdescriptionwork3": "Eine Echtzeit-Chat-Anwendung mit Benutzer-Authentifizierung, basierend auf Spring Boot und Angular, mit WebSocket-Unterstützung.",
         "Longdescriptionwork3": "Dieses Projekt ist eine Full-Stack-Webanwendung, die es Benutzern ermöglicht, sich zu registrieren, anzumelden und in Echtzeit zu chatten. Das Backend basiert auf Spring Boot und übernimmt die Benutzer-Authentifizierung (Registrierung und Anmeldung), Sitzungsverwaltung und die WebSocket-basierte Nachrichtenübertragung. Das Frontend wurde mit Angular entwickelt und bietet eine reaktionsschnelle Benutzeroberfläche für Chats, Benutzerverwaltung und Live-Updates. Die Anwendung sorgt für eine sichere Kommunikation und ein reibungsloses Benutzererlebnis.",
+        "titlework4": "ChapterOne",
+        "Shortdescriptionwork4": "Bibliotheks-Dashboard mit Spring Boot, Angular 16 und MongoDB — Verwaltung von Nutzern, Büchern, Autoren und Statistiken mit Hell-/Dunkelmodus.",
+        "Longdescriptionwork4": "Websystem zur Verwaltung von Nutzern (aktiv, inaktiv, gesperrt), Büchern und Autoren. Verfolgt Ausleihen (aktuell, zurückgegeben, verspätet) mit Diagrammen und sicherem Token-Login. Mit Hell-/Dunkelmodus.",
     
     "-contact": "************************************ contact *********************************************",
         "Lets_work_together": "Lassen Sie uns zusammenarbeiten",

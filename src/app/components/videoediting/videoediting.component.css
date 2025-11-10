@@ -1,0 +1,40 @@
+.main {
+    height: 100vh;
+    padding: 30px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 60px 20px;
+}
+
+app-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.body {
+    margin-top: 10px;
+    height: 100%;
+}
+
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+svg {
+    cursor: pointer;
+}
+
+
+
+/* Medium and small screens (767px) */
+@media screen and (max-width: 767px) {
+    .main {
+        height: 100dvh;
+        padding: 40px 6px;
+    }
+}

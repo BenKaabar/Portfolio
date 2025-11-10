@@ -180,6 +180,7 @@ app-navbar {
 @media screen and (max-width: 576px) {
     .main {
         height: 100dvh;
+        padding: 50px 6px 6px 6px;
     }
 
     .right>img {
