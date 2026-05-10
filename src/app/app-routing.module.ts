@@ -13,8 +13,10 @@ import { ExperienceComponent } from './components/resumeComponents/experience/ex
 import { SkillsComponent } from './components/resumeComponents/skills/skills.component';
 import { VideoeditingComponent } from './components/videoediting/videoediting.component';
 import { MarkitingdigitalComponent } from './components/markitingdigital/markitingdigital.component';
+import { MainPageComponent } from './NewVersionLayout/main-page/main-page.component';
 
 const routes: Routes = [
+  { path: "", component: MainPageComponent},
   { path: "home", component: HomeComponent },
   { path: "services", component: ServiceComponent },
   { path: "contact", component: ContactComponent },
@@ -31,7 +33,7 @@ const routes: Routes = [
       { path: '', redirectTo: '/education', pathMatch: 'full' }
     ]
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 @NgModule({

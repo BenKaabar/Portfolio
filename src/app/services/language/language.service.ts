@@ -18,11 +18,11 @@ export class LanguageService {
 
   getFlag(): string {
     this.currentLanguage = localStorage.getItem('language');
-    if (this.currentLanguage == "en") {
+    if (this.currentLanguage == "EN") {
       this.currentFlag = "assets/images/flag/gb.png";
-    } else if (this.currentLanguage == "fr") {
+    } else if (this.currentLanguage == "FR") {
       this.currentFlag = "assets/images/flag/france.png";
-    } else if (this.currentLanguage == "de") {
+    } else if (this.currentLanguage == "DE") {
       this.currentFlag = "assets/images/flag/germany.png";
     }
     return this.currentFlag;

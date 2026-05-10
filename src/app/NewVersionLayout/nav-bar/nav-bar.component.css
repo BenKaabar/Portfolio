@@ -1,0 +1,77 @@
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6vh;
+    width: 100%;
+    background-color: #4FD1C5;
+}
+.moon, .sun{
+    padding-right: 16px;
+}
+
+.language-selector {
+    position: relative;
+    width: auto;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0px 6px;
+}
+
+.selected-language {
+    display: flex;
+    align-items: center;
+}
+
+.flag-icon {
+    width: 20px;
+    height: 15px;
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0;
+    list-style: none;
+    margin: 5px 0;
+}
+
+.dropdown-menu li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #eee;
+}
+hr{
+    color: black;
+    height: 1px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-visible {
+  transform: translateY(0);
+}

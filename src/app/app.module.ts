@@ -21,6 +21,9 @@ import { ExperienceComponent } from './components/resumeComponents/experience/ex
 import { SkillsComponent } from './components/resumeComponents/skills/skills.component';
 import { VideoeditingComponent } from './components/videoediting/videoediting.component';
 import { MarkitingdigitalComponent } from './components/markitingdigital/markitingdigital.component';
+import { NavBarComponent } from './NewVersionLayout/nav-bar/nav-bar.component';
+import { MainPageComponent } from './NewVersionLayout/main-page/main-page.component';
+import { GeneralInformationComponent } from './NewVersionLayout/general-information/general-information.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -41,7 +44,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     ExperienceComponent,
     SkillsComponent,
     VideoeditingComponent,
-    MarkitingdigitalComponent
+    MarkitingdigitalComponent,
+    NavBarComponent,
+    MainPageComponent,
+    GeneralInformationComponent
   ],
   imports: [
     BrowserModule,
