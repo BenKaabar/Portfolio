@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     if (this.languageService.getLanguage() == null || this.languageService.getLanguage() == undefined) {
-      this.languageService.setLanguage("en", "assets/images/flag/gb.png");
+      this.languageService.setLanguage("DE", "assets/images/flag/germany.png");
     }
     this.currentLanguage = this.languageService.getLanguage();
     this.currentFlag = this.languageService.getFlag();

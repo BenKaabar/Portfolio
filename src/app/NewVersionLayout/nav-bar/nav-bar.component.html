@@ -16,18 +16,18 @@
     <div class="language-selector" #dropdown (click)="toggleDropdown($event)">
         <div class="selected-language">
             <img [src]="currentFlag" alt="Selected Language" class="flag-icon" />
-            <span style="color: black;">{{ currentLanguage }}</span>
+            <span style="color: black;">{{ currentLanguage.toUpperCase() }}</span>
         </div>
         <ul *ngIf="dropdownOpen" class="dropdown-menu">
-            <li (click)="switchLanguage('EN', 'assets/images/flag/gb.png',$event)" style="color: black;">
+            <li (click)="switchLanguage('en', 'assets/images/flag/gb.png',$event)" style="color: black;">
                 <img src="assets/images/flag/gb.png" alt="English" class="flag-icon" /> EN
             </li>
             <hr>
-            <li (click)="switchLanguage('FR', 'assets/images/flag/france.png',$event)" style="color: black;">
+            <li (click)="switchLanguage('fr', 'assets/images/flag/france.png',$event)" style="color: black;">
                 <img src="assets/images/flag/france.png" alt="Français" class="flag-icon" /> FR
             </li>
             <hr>
-            <li (click)="switchLanguage('DE', 'assets/images/flag/germany.png',$event)" style="color: black;">
+            <li (click)="switchLanguage('de', 'assets/images/flag/germany.png',$event)" style="color: black;">
                 <img src="assets/images/flag/germany.png" alt="Deutsch" class="flag-icon" /> DE
             </li>
         </ul>
