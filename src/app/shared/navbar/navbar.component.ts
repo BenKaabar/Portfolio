@@ -60,7 +60,7 @@ export class NavbarComponent implements OnInit {
     this.currentLanguage = this.languageService.getLanguage();
     this.dropdownOpen = false;
   }
-  @HostListener('window:resize', ['$event'])
+  // @HostListener('window:resize', ['$event'])
   onResize() {
     this.checkScreenSize();
   }

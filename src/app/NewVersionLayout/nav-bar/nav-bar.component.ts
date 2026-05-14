@@ -44,7 +44,6 @@ export class NavBarComponent implements OnInit {
   // ********************************************************************** check language **********************************************************************
   switchLanguage(language: string, flag: string, event: MouseEvent): void {
     event?.stopPropagation();
-    language = language;
     this.translate.use(language);
     this.languageService.setLanguage(language, flag);
     this.currentFlag = this.languageService.getFlag();

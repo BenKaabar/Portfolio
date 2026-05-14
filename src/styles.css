@@ -7,13 +7,13 @@
   --background-color: white;
   --text-color: black;
   --heading-color: black;
-  --main-background: #eceff2;
+  --main-background: #E8F1F8;
 }
 .dark-mode {
   --background-color: rgba(0, 0, 0, 0.7);
   --text-color: white;
   --heading-color: white;
-  --main-background: #1F242D;
+  --main-background: #0A1628;
 }
 
 h1,h2,h3,h4,h5,h6,span,strong,li,p,svg{

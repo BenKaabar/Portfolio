@@ -24,6 +24,7 @@ import { MarkitingdigitalComponent } from './components/markitingdigital/markiti
 import { NavBarComponent } from './NewVersionLayout/nav-bar/nav-bar.component';
 import { MainPageComponent } from './NewVersionLayout/main-page/main-page.component';
 import { GeneralInformationComponent } from './NewVersionLayout/general-information/general-information.component';
+import { ContactsComponent } from './NewVersionLayout/contacts/contacts.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -47,7 +48,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MarkitingdigitalComponent,
     NavBarComponent,
     MainPageComponent,
-    GeneralInformationComponent
+    GeneralInformationComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
