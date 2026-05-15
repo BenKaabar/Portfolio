@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Work } from 'src/app/models/Work';
 
 @Injectable({
@@ -6,7 +7,10 @@ import { Work } from 'src/app/models/Work';
 })
 export class WorkService {
   private selectedwork: Work | null = null;
+  private detailsWork = new BehaviorSubject<boolean>(false);
 
+  detailsWork$ = this.detailsWork.asObservable();
+  
   setWork(work: Work) {
     this.selectedwork = work;
   }
@@ -18,4 +22,13 @@ export class WorkService {
   clearWork() {
     this.selectedwork = null;
   }
+
+  setDetailsWork(value: boolean) {
+    this.detailsWork.next(value);
+  }
+
+  clearDetailsWork() {
+    this.detailsWork.next(false);
+  }
+
 }

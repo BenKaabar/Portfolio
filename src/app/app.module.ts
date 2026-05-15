@@ -25,6 +25,11 @@ import { NavBarComponent } from './NewVersionLayout/nav-bar/nav-bar.component';
 import { MainPageComponent } from './NewVersionLayout/main-page/main-page.component';
 import { GeneralInformationComponent } from './NewVersionLayout/general-information/general-information.component';
 import { ContactsComponent } from './NewVersionLayout/contacts/contacts.component';
+import { WebDevelopementComponent } from './NewVersionLayout/web-developement/web-developement.component';
+import { MarketingDigitalComponent } from './NewVersionLayout/marketing-digital/marketing-digital.component';
+import { ArchDesignerComponent } from './NewVersionLayout/arch-designer/arch-designer.component';
+import { VideoEditingComponent } from './NewVersionLayout/video-editing/video-editing.component';
+import { WebDevelopementDetailsComponent } from './NewVersionLayout/web-developement-details/web-developement-details.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -49,7 +54,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     NavBarComponent,
     MainPageComponent,
     GeneralInformationComponent,
-    ContactsComponent
+    ContactsComponent,
+    WebDevelopementComponent,
+    MarketingDigitalComponent,
+    ArchDesignerComponent,
+    VideoEditingComponent,
+    WebDevelopementDetailsComponent
   ],
   imports: [
     BrowserModule,

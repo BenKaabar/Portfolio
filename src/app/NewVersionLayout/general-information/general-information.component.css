@@ -157,6 +157,26 @@
     transition-delay: 0.2s;
 }
 
+.typing {
+    color: #fff;
+
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 5px #4FD1C5,
+            0 0 10px #4FD1C5;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px #4FD1C5,
+            0 0 40px #4FD1C5;
+    }
+}
+
 @media screen and (min-width: 767px) and (max-width:861px) {
     .links button {
         padding: 6px;

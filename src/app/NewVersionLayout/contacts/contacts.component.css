@@ -107,14 +107,11 @@ textarea.ng-valid.ng-touched {
 .item Strong {
     color: #2D7DD2;
 }
-/* Initial state */
 .contact {
     opacity: 0;
     transform: translateX(200px);
     transition: all 1s ease;
 }
-
-/* Animation state */
 .contact.show {
     opacity: 1;
     transform: translateY(0);
