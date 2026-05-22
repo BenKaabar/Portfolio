@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { WorkService } from 'src/app/services/work/work.service';
 
 @Component({
@@ -8,15 +8,34 @@ import { WorkService } from 'src/app/services/work/work.service';
 })
 export class MainPageComponent implements OnInit {
 
-  havedetails: boolean = false;
+  havedetails = false;
+
+  @ViewChild('detailsSection')
+  detailsSection!: ElementRef;
 
   constructor(private workService: WorkService) { }
 
   ngOnInit(): void {
 
-    this.workService.detailsWork$.subscribe((value) => {
-      this.havedetails = value;
-    });
+    this.workService.detailsWork$
+      .subscribe((value) => {
+
+        this.havedetails = value;
+
+        if (value) {
+
+          setTimeout(() => {
+
+            this.detailsSection.nativeElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+
+          }, 100);
+
+        }
+
+      });
 
   }
 }

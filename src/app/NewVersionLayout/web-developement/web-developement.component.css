@@ -15,7 +15,6 @@ h1 {
     height: 100%;
 }
 
-/* left */
 .left {
     width: 30%;
     padding: 20px;
@@ -59,7 +58,6 @@ h1 {
     color: rgb(79, 209, 197);
 }
 
-/* right */
 .right {
     width: 70%;
     height: 100%;
@@ -119,18 +117,15 @@ h6 {
 .main {
     opacity: 0;
     filter: blur(20px);
-    /* transform: translateY(80px); */
 
     transition:
         opacity 1s ease,
         filter 1s ease,
-        /* transform 1s ease; */
 }
 
 .main.show {
     opacity: 1;
     filter: blur(0);
-    /* transform: translateY(0); */
 }
 
 @keyframes moveAcross {

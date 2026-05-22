@@ -21,23 +21,6 @@ export class WebDevelopementComponent implements OnInit, AfterViewInit {
     this.workService.clearWork();
     this.workService.clearDetailsWork();
   }
-  // ********************************************************************** Animation **********************************************************************
-  ngAfterViewInit() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    this.elements.forEach((el) => {
-      observer.observe(el.nativeElement);
-    });
-  }
   //  ********************************************************************** All works **********************************************************************
   allWorks: Work[] = [
     {
@@ -87,6 +70,7 @@ export class WebDevelopementComponent implements OnInit, AfterViewInit {
   goToWorkDetail(work: Work): void {
     this.workService.setWork(work);
     this.workService.setDetailsWork(true);
+    scrollTo
   }
 
   //  ********************************************************************** Pagination **********************************************************************
@@ -128,6 +112,22 @@ export class WebDevelopementComponent implements OnInit, AfterViewInit {
     }
   }
 
+  // ********************************************************************** Animation **********************************************************************
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
+    this.elements.forEach((el) => {
+      observer.observe(el.nativeElement);
+    });
+  }
 
 }

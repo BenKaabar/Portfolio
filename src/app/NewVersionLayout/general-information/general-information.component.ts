@@ -25,9 +25,10 @@ export class GeneralInformationComponent implements OnInit, AfterViewInit {
   downloadCV() {
     this.checkLanguage();
     let fileName;
-    if (this.currentLanguage === 'FR') {
+    console.log("lang ",this.currentLanguage)
+    if (this.currentLanguage === 'fr') {
       fileName = 'Curriculum Vitae ACHRAF BEN KAABAR.pdf';
-    } else if (this.currentLanguage === 'EN') {
+    } else if (this.currentLanguage === 'en') {
       fileName = 'Resume ACHRAF BEN KAABAR.pdf';
     } else {
       fileName = 'Lebenslauf ACHRAF BEN KAABAR.pdf';

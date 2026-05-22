@@ -2,6 +2,9 @@
     <app-nav-bar></app-nav-bar>
     <app-general-information></app-general-information>
     <app-web-developement></app-web-developement>
-    <app-web-developement-details *ngIf="havedetails"></app-web-developement-details>
+    <div #detailsSection>
+        <app-web-developement-details *ngIf="havedetails">
+        </app-web-developement-details>
+    </div>
     <app-contacts></app-contacts>
 </div>
