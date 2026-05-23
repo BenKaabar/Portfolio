@@ -1,0 +1,62 @@
+.main {
+    height: 100vh;
+    padding: 30px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 4%;
+}
+
+.body {
+    margin-top: 10px;
+    height: 90%;
+}
+
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+svg {
+    cursor: pointer;
+}
+
+h1 {
+    position: relative;
+    white-space: nowrap;
+    color: #2D7DD2;
+    animation: moveAcross 8s linear infinite;
+}
+
+@keyframes moveAcross {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+.body {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: all 1s ease;
+}
+
+.body.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Medium and small screens (767px) */
+@media screen and (max-width: 767px) {
+    .main {
+        height: 100dvh;
+        padding: 40px 6px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}

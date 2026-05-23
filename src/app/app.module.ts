@@ -27,7 +27,6 @@ import { GeneralInformationComponent } from './NewVersionLayout/general-informat
 import { ContactsComponent } from './NewVersionLayout/contacts/contacts.component';
 import { WebDevelopementComponent } from './NewVersionLayout/web-developement/web-developement.component';
 import { MarketingDigitalComponent } from './NewVersionLayout/marketing-digital/marketing-digital.component';
-import { ArchDesignerComponent } from './NewVersionLayout/arch-designer/arch-designer.component';
 import { VideoEditingComponent } from './NewVersionLayout/video-editing/video-editing.component';
 import { WebDevelopementDetailsComponent } from './NewVersionLayout/web-developement-details/web-developement-details.component';
 
@@ -57,7 +56,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactsComponent,
     WebDevelopementComponent,
     MarketingDigitalComponent,
-    ArchDesignerComponent,
     VideoEditingComponent,
     WebDevelopementDetailsComponent
   ],
