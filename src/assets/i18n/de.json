@@ -13,10 +13,9 @@
         "Contact": "Kontakt",
     
     "-service": "************************************ service *********************************************",
-        "Web_Developement": "Webentwicklung",
-        "UX/UI_Designer": "UX/UI Designer",
-        "2D/3D_Designer": "2D/3D Designer",
-        "Video_Editing": "Videobearbeitung",
+        "service1": "Webentwicklung",
+        "service2": "Digitales Marketing",
+        "service3": "Videobearbeitung",
     
     "-resume": "************************************ resume *********************************************",
         "experience": "Erfahrung",

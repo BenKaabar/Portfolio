@@ -157,10 +157,27 @@
     transition-delay: 0.2s;
 }
 
-.typing {
-    color: #fff;
+.wave span {
+    display: inline-block;
+    animation: wave 1.8s infinite ease-in-out;
+    font-weight: bold;
+}
 
-    animation: glow 2s infinite alternate;
+/* auto stagger */
+.wave span {
+    animation-delay: calc(var(--i) * 0.08s);
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        color: #2D7DD2;
+        text-shadow: 0 0 10px rgba(45,125,210,0.6);
+    }
 }
 
 @keyframes glow {

@@ -8,9 +8,16 @@ import { Work } from 'src/app/models/Work';
 export class WorkService {
   private selectedwork: Work | null = null;
   private detailsWork = new BehaviorSubject<boolean>(false);
+  private scrollToWork = new BehaviorSubject<boolean>(false);
 
-  detailsWork$ = this.detailsWork.asObservable();
+  scrollToWork$ = this.scrollToWork.asObservable();
+
+  triggerScrollToWork() {
+    this.scrollToWork.next(true);
+  }
   
+  detailsWork$ = this.detailsWork.asObservable();
+
   setWork(work: Work) {
     this.selectedwork = work;
   }

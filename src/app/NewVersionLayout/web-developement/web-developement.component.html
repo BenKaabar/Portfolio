@@ -1,6 +1,6 @@
-<div class="main" #animEl>
-    <h1>{{"Web_Developement" | translate }}</h1>
-    <div class="mainpage" *ngFor="let work of paginatedWorks; let i = index" (touchstart)="onTouchStart($event)"
+<div class="main">
+    <h1>{{"service1" | translate }}</h1>
+    <div #animEl class="mainpage" *ngFor="let work of paginatedWorks; let i = index" (touchstart)="onTouchStart($event)"
         (touchend)="onTouchEnd($event)">
         <div class="left">
             <div class="leftdetail">

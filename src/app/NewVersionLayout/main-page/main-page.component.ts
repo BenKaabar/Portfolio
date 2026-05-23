@@ -12,7 +12,8 @@ export class MainPageComponent implements OnInit {
 
   @ViewChild('detailsSection')
   detailsSection!: ElementRef;
-
+  @ViewChild('workSection')
+  workSection!: ElementRef;
   constructor(private workService: WorkService) { }
 
   ngOnInit(): void {
@@ -27,6 +28,24 @@ export class MainPageComponent implements OnInit {
           setTimeout(() => {
 
             this.detailsSection.nativeElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+
+          }, 100);
+
+        }
+
+      });
+      
+    this.workService.scrollToWork$
+      .subscribe((value) => {
+
+        if (value) {
+
+          setTimeout(() => {
+
+            this.workSection.nativeElement.scrollIntoView({
               behavior: 'smooth',
               block: 'start'
             });

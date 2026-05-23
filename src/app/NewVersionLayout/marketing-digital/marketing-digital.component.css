@@ -1,0 +1,157 @@
+.main {
+    height: 100vh;
+    padding: 4%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 48%);
+    gap: 20px;
+    height: 80%;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(4px);
+    z-index: 50;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #111;
+    border-radius: 1rem;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 900px;
+    max-height: 80vh;
+    overflow: hidden;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+.modal-image {
+    max-height: 80vh;
+    width: auto;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0.7;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    position: relative;
+    white-space: nowrap;
+    color: #2D7DD2;
+    animation: moveAcross 8s linear infinite;
+}
+
+@keyframes moveAcross {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+.body {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 1s ease;
+}
+
+.body.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main {
+        height: 100dvh;
+        padding: 20px;
+    }
+}
+
+/*  small screens (767px) */
+@media screen and (max-width: 767px) {
+    .main {
+        height: 100dvh;
+        padding: 20px 10px;
+    }
+
+    .body {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 48%);
+        gap: 20px;
+        height: 90%;
+    }
+
+    .card {
+        width: 100%;
+        max-height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}

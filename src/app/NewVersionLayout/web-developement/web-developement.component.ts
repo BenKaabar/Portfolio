@@ -21,6 +21,7 @@ export class WebDevelopementComponent implements OnInit, AfterViewInit {
     this.workService.clearWork();
     this.workService.clearDetailsWork();
   }
+
   //  ********************************************************************** All works **********************************************************************
   allWorks: Work[] = [
     {
@@ -114,6 +115,7 @@ export class WebDevelopementComponent implements OnInit, AfterViewInit {
 
   // ********************************************************************** Animation **********************************************************************
   ngAfterViewInit() {
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -125,7 +127,11 @@ export class WebDevelopementComponent implements OnInit, AfterViewInit {
       { threshold: 0.2 }
     );
 
-    this.elements.forEach((el) => {
+    this.elements.changes.subscribe((list: QueryList<ElementRef>) => {
+      list.forEach(el => observer.observe(el.nativeElement));
+    });
+
+    this.elements.forEach(el => {
       observer.observe(el.nativeElement);
     });
   }

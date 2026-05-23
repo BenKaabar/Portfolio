@@ -13,10 +13,9 @@
         "Contact": "Contact",
     
     "-service": "************************************ Service *********************************************",
-        "Web_Developement": "Développement Web",
-        "UX/UI_Designer": "Designer UX/UI",
-        "2D/3D_Designer": "Designer 2D/3D",
-        "Video_Editing": "Montage Vidéo",
+        "service1": "Développement Web",
+        "service2": "Marketing Digital",
+        "service3": "Montage Vidéo",
     
     "-resume": "************************************ resume *********************************************",
         "experience": "Expérience",

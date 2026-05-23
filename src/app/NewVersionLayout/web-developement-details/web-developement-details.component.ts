@@ -23,5 +23,6 @@ export class WebDevelopementDetailsComponent implements OnInit {
   navigate() {
     this.workService.clearWork();
     this.workService.clearDetailsWork();
+    this.workService.triggerScrollToWork();
   }
 }

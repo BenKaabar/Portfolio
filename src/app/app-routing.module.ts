@@ -14,10 +14,13 @@ import { SkillsComponent } from './components/resumeComponents/skills/skills.com
 import { VideoeditingComponent } from './components/videoediting/videoediting.component';
 import { MarkitingdigitalComponent } from './components/markitingdigital/markitingdigital.component';
 import { MainPageComponent } from './NewVersionLayout/main-page/main-page.component';
+import { MarketingDigitalComponent } from './NewVersionLayout/marketing-digital/marketing-digital.component';
+
 
 const routes: Routes = [
   { path: "", component: MainPageComponent},
   { path: "home", component: HomeComponent },
+  { path: "1", component: MarketingDigitalComponent },
   { path: "services", component: ServiceComponent },
   { path: "contact", component: ContactComponent },
   { path: "Markitingdigital", component: MarkitingdigitalComponent },

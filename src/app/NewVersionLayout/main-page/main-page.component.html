@@ -1,10 +1,14 @@
 <div class="interface">
     <app-nav-bar></app-nav-bar>
     <app-general-information></app-general-information>
-    <app-web-developement></app-web-developement>
+    <div #workSection>
+        <app-web-developement></app-web-developement>
+    </div>
+
     <div #detailsSection>
         <app-web-developement-details *ngIf="havedetails">
         </app-web-developement-details>
     </div>
+    <app-marketing-digital></app-marketing-digital>
     <app-contacts></app-contacts>
 </div>
