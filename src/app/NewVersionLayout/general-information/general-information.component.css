@@ -76,7 +76,6 @@
 .image-wrapper {
     position: relative;
     aspect-ratio: 1 / 1;
-
 }
 
 .image-wrapper img {
@@ -169,14 +168,16 @@
 }
 
 @keyframes wave {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-10px);
         color: #2D7DD2;
-        text-shadow: 0 0 10px rgba(45,125,210,0.6);
+        text-shadow: 0 0 10px rgba(45, 125, 210, 0.6);
     }
 }
 
@@ -267,6 +268,11 @@
         border-radius: 15px;
         font-size: 0.8rem;
     }
+
+    .image-wrapper {
+        height: 80%;
+    }
+
 }
 
 @media screen and (max-width: 576px) {

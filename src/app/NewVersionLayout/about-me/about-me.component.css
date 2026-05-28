@@ -1,0 +1,158 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    padding: 4%;
+}
+
+.details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    white-space: nowrap;
+}
+
+h1 {
+    position: relative;
+    white-space: nowrap;
+    color: #2D7DD2;
+    animation: moveAcross 8s linear infinite;
+}
+
+@keyframes moveAcross {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+strong {
+    font-size: 30px;
+    height: 45px;
+}
+
+.typing {
+    display: inline-block;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    width: 0;
+
+    opacity: 0;
+
+    border-right: 2px solid #2D7DD2;
+}
+
+.typing.show {
+    opacity: 1;
+}
+
+.typing.show.delay-1 {
+    animation:
+        typing 2s steps(40, end) forwards,
+        blink 0.7s step-end 3;
+
+    animation-delay: 0s;
+}
+
+.typing.show.delay-2 {
+    animation:
+        typing 2s steps(40, end) forwards,
+        blink 0.7s step-end 3;
+
+    animation-delay: 2s;
+}
+
+.typing.show.delay-3 {
+    animation:
+        typing 2s steps(40, end) forwards,
+        blink 0.7s step-end 3;
+
+    animation-delay: 4s;
+}
+
+.typing.show.delay-4 {
+    animation:
+        typing 2s steps(40, end) forwards,
+        blink 0.7s step-end 3;
+
+    animation-delay: 6s;
+}
+
+.typing.show.delay-5 {
+    animation:
+        typing 2s steps(40, end) forwards,
+        blink 0.7s step-end 3;
+
+    animation-delay: 8s;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blink */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.delay-1 {
+    animation-delay: 0s;
+}
+
+.delay-2 {
+    animation-delay: 2s;
+}
+
+.delay-3 {
+    animation-delay: 4s;
+}
+
+.delay-4 {
+    animation-delay: 6s;
+}
+
+.delay-5 {
+    animation-delay: 8s;
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        padding: 6px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    strong {
+        font-size: 20px;
+        height: 30px;
+    }
+}

@@ -15,7 +15,7 @@ import { WorkComponent } from './components/work/work.component';
 import { WorkDetailsComponent } from './components/work-details/work-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ResumeComponent } from './components/resumeComponents/resume/resume.component';
-import { AboutMeComponent } from './components/resumeComponents/about-me/about-me.component';
+// import { AboutMeComponent } from './components/resumeComponents/about-me/about-me.component';
 import { EducationComponent } from './components/resumeComponents/education/education.component';
 import { ExperienceComponent } from './components/resumeComponents/experience/experience.component';
 import { SkillsComponent } from './components/resumeComponents/skills/skills.component';
@@ -29,6 +29,7 @@ import { WebDevelopementComponent } from './NewVersionLayout/web-developement/we
 import { MarketingDigitalComponent } from './NewVersionLayout/marketing-digital/marketing-digital.component';
 import { VideoEditingComponent } from './NewVersionLayout/video-editing/video-editing.component';
 import { WebDevelopementDetailsComponent } from './NewVersionLayout/web-developement-details/web-developement-details.component';
+import { AboutMeComponent } from './NewVersionLayout/about-me/about-me.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
